@@ -1,0 +1,399 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="alankarTheme.master.cs" Inherits="AlankarNewDesign.alankarTheme" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+      <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>Alankar Tools pvt. ltd.</title>
+    <link href="js/jquery-ui.css" rel="stylesheet" />
+
+     <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- MetisMenu CSS -->
+    <link href="vendor/metisMenu/metisMenu.min.css" rel="stylesheet"/>
+
+
+     <!-- DataTables CSS -->
+    <link href="dbTable/datatables.min.css" rel="stylesheet" />
+    <link href="dbTable/Buttons-1.5.6/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <link href="vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet"/>
+
+    <!-- DataTables Responsive CSS -->
+    <link href="vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link href="dist/css/sb-admin-2.css" rel="stylesheet"/>
+
+    <!-- Morris Charts CSS -->
+    <link href="vendor/morrisjs/morris.css" rel="stylesheet"/>
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .input-sm {
+  height: 21px;
+padding: 2px 8px;
+
+    font-size: 10px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+        .navbar-default {
+
+    border-color: #e7e7e7;
+}
+.navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+    background-color: indigo;
+}
+.nav > li > a:focus, .nav > li > a:hover {
+    text-decoration: none;
+    background-color: #376899;
+    color:white;
+}
+
+table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.dataTable thead .sorting_asc_disabled, table.dataTable thead .sorting_desc_disabled {
+    background: #8a6d3b;
+    color: white;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #f8eace;
+}
+ table.dataTable.dtr-inline.collapsed > tbody > tr > td.details-control:first-child:before {
+  display: none;
+}
+
+ .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 8px 25px;
+        padding-left: 25px;
+}
+ .nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+    background-color: #4b0082;
+    border-color: #337ab7;
+}
+    </style>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style=" font-size:12px;">
+    <form id="form1" runat="server">
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="color:white;">alankar tools pvt. ltd.</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+
+                <!-- /.dropdown -->
+
+                <!-- /.dropdown -->
+
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" style="color:white;" data-toggle="dropdown" href="#">
+                        <asp:Label ID="lblUserName" runat="server" Font-Bold="true"></asp:Label>
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li ><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.aspx"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                      <%--  <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>--%>
+                        <li>
+                            <a href="Webform1.aspx"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Masters<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <%--<a href="flot.html">Flot Charts</a>--%>
+                                    <a href="dimension.aspx"> <i class="glyphicon glyphicon-pencil"></i> Dimension</a>
+
+                                </li>
+                                <li>
+                                   <a href="dimension_restriction.aspx"> <i class="glyphicon glyphicon-pencil"></i> Dia Restriction</a>
+                                </li>
+                                <li>
+                                    <a href="raw_material.aspx"> <i class="glyphicon glyphicon-pencil"></i> Raw Material</a>
+                                </li>
+                                <li>
+                                    <a href="main_tool.aspx"> <i class="glyphicon glyphicon-pencil"></i> Tool Type</a>
+                                </li>
+                                <li>
+                                    <a href="sub_tool.aspx"> <i class="glyphicon glyphicon-pencil"></i> Sub Tool</a>
+                                </li>
+                                <li>
+                                    <a href="stage_type.aspx"> <i class="glyphicon glyphicon-pencil"></i> Stage Type</a>
+                                </li>
+                                <li>
+                                    <a href="stages.aspx"> <i class="glyphicon glyphicon-pencil"></i> Stages</a>
+                                </li>
+                                <li>
+                                    <a href="customers.aspx"> <i class="glyphicon glyphicon-pencil"></i> Customers</a>
+                                </li>
+                                <li>
+                                    <a href="employees.aspx"> <i class="glyphicon glyphicon-pencil"></i> Employee</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                              <a href="#"><i class="fa fa-wrench fa-fw"></i> Configuration<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="tool_stage_config.aspx"><i class="glyphicon glyphicon-pencil"></i> Tool Type - Stage</a>
+                                </li>
+                                 <li>
+                                    <a href="tool_rm_config.aspx"> <i class="glyphicon glyphicon-pencil"></i> Tool Type - R.M</a>
+                                </li>
+                                 <li>
+                                    <a href="tool_dim_config.aspx"> <i class="glyphicon glyphicon-pencil"></i> Tool Type - Dimension</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-edit fa-fw"></i>  Transactions <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="new_oc_entry.aspx"> <i class="glyphicon glyphicon-pencil"></i> New Oc Entry</a>
+                                </li>
+                                <li>
+                                    <a href="all_oc_entries.aspx"><i class="glyphicon glyphicon-pencil"></i> All Oc</a>
+                                </li>
+                                <li>
+                                    <a href="quantity_updation.aspx"><i class="glyphicon glyphicon-pencil"></i> Quantity Updation</a>
+                                </li>
+                                 <li>
+                                    <a href="schedule.aspx"><i class="glyphicon glyphicon-pencil"></i> Schedule</a>
+                                </li>
+                                 <li>
+                                    <a href="rejection_salvage.aspx"><i class="glyphicon glyphicon-pencil"></i> Rejection/Salvage</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                             <a href="#"><i class="glyphicon glyphicon-book"></i>  Invoice <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="create_invoice.aspx"><i class="glyphicon glyphicon-pencil"></i> Create Invoice</a>
+                                </li>
+                                <li>
+                                    <a href="all_invoice.aspx"><i class="glyphicon glyphicon-pencil"></i> All Invoices</a>
+                                </li>
+                            </ul>
+                        </li>
+                         <li>
+                            <a href="#"><i class="glyphicon glyphicon-list-alt"> </i>  Reports <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="rpt_oc_view.aspx"><i class="glyphicon glyphicon-pencil"></i> OC View</a>
+                                </li>
+                                <li>
+                                    <a href="Party_wise_Rpt.aspx"><i class="glyphicon glyphicon-pencil"></i> Customer Wise Rpt</a>
+                                </li>
+                                <li>
+                                    <a href="IssueLoadRpt.aspx"><i class="glyphicon glyphicon-pencil"></i> Work in process</a>
+                                </li>
+                               <%-- <li>
+                                    <a href="Quantity_Report.aspx"><i class="glyphicon glyphicon-pencil"> </i> Quantity Report</a>
+                                </li>--%>
+                                <li>
+                                    <a href="ScheduleRpt.aspx"><i class="glyphicon glyphicon-pencil"></i> Schedule Report</a>
+                                </li>
+                                <li>
+                                    <a href="PO_without_OC.aspx"><i class="glyphicon glyphicon-pencil"></i> OC Without PO</a>
+                                </li>
+                                <li>
+                                    <a href="Input_oc_item_Code.aspx"><i class="glyphicon glyphicon-pencil"></i> Info by Item Code</a>
+                                </li>
+                                <li>
+                                    <a href="Total_item_in_Clining.aspx"><i class="glyphicon glyphicon-pencil"></i> Total Item in Clining Stage</a>
+                                </li>
+                                <li>
+                                    <a href="order_booking.aspx"><i class="glyphicon glyphicon-pencil"></i> Order Booking</a>
+                                </li>
+                                <li>
+                                    <a href="InvoiceRpt.aspx"><i class="glyphicon glyphicon-pencil"></i> Invoice Report</a>
+                                </li>
+
+                                <li>
+                                    <a href="ItemCodeRpt.aspx"><i class="glyphicon glyphicon-pencil"></i>Item Code Report</a>
+                                </li>
+                                <li>
+                                    <a href="NewBookingRpt.aspx"><i class="glyphicon glyphicon-pencil"></i> Booking Report</a>
+                                </li>
+                            <%--    <li>
+                                    <a href="BookingRpt.aspx"><i class="glyphicon glyphicon-pencil"></i> Booking Rpt</a>
+                                </li>--%>
+                              <%--  <li>
+                                    <a href="DispatchedRpt.aspx"><i class="glyphicon glyphicon-pencil"></i>Dispatched Rpt</a>
+                                </li>--%>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="NearBy.aspx">Near By Report</a>
+                        </li>
+            <li>
+                <a href="NewInvReport.aspx">Invoice Report</a>
+            </li>
+                        <li>
+                            <a href="NewItemCodeRpt.aspx">Item code Report</a>
+                        </li>
+
+                       <%-- <li>
+                            <a href="#"><i class="glyphicon glyphicon-piggy-bank"></i> RM Inventory  <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="RM_Stock.aspx"><i class="glyphicon glyphicon-pencil"></i>Stock</a>
+                                </li>
+                                <li>
+                                    <a href="Rm_OcEntry.aspx"><i class="glyphicon glyphicon-pencil"></i>RM OC Entry</a>
+                                   
+                                </li>
+
+                            </ul>
+                        </li>--%>
+
+
+
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+       
+        <div id="page-wrapper" style="padding-top:40px;">
+            <div class="container-fluid">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                 
+                </asp:ContentPlaceHolder>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    </form>
+
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.js"></script>
+
+     <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="vendor/raphael/raphael.min.js"></script>
+    <script src="vendor/morrisjs/morris.min.js"></script>
+    <script src="data/morris-data.js"></script>
+
+
+
+      <!-- DataTables JavaScript -->
+   <%-- <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="vendor/datatables-responsive/dataTables.responsive.js"></script>--%>
+    <script src="dbTable/DataTables-1.10.18/js/jquery.dataTables.min.js"></script>
+    <script src="dbTable/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>
+    <script src="dbTable/Buttons-1.5.6/js/buttons.flash.min.js"></script>
+    <script src="dbTable/JSZip-2.5.0/jszip.min.js"></script>
+    <script src="dbTable/pdfmake-0.1.36/pdfmake.min.js"></script>
+    <script src="dbTable/pdfmake-0.1.36/vfs_fonts.js"></script>
+    <script src="dbTable/Buttons-1.5.6/js/buttons.html5.min.js"></script>
+    <script src="dbTable/Buttons-1.5.6/js/buttons.print.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="dist/js/sb-admin-2.js"></script>
+
+
+      <script>
+    //$(document).ready(function() {
+    //    $('.GridView1').DataTable({
+    //        responsive: false
+    //    });
+    //});
+
+    $(document).ready(function () {
+        $('.GridView1').DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
+        });
+    });
+    </script>
+
+    <script>
+        $(".datepicker").datepicker({
+            changeYear: true,
+            changeMonth: true,
+            dateFormat: "dd-mm-yy"
+        });
+</script>
+
+
+</body>
+</html>

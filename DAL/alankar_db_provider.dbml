@@ -1,0 +1,1874 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ALANKAR_DB.MDF" Class="alankar_db_providerDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=ALANKAR_DB.MDF;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="D__DEVELOPMENT_SOFTWARE_UPDATED_DB_ALANKAR_DB_MDFConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CHANGE_LETTER" Member="CHANGE_LETTERs">
+    <Type Name="CHANGE_LETTER">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FOC" Type="System.String" DbType="NVarChar(110)" CanBeNull="true" />
+      <Column Name="LETTER" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CHANGE_DESCRIPTION" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OC_NO" Type="System.String" DbType="NVarChar(110)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CUSTOMER_CONTACT_PERSONS" Member="CUSTOMER_CONTACT_PERSONs">
+    <Type Name="CUSTOMER_CONTACT_PERSON">
+      <Column Name="CC_ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PARTY_CODE" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CC_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DEPARTMENT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DESIGNATION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MOBILE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="LANDLINE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CC_INITIAL" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="MASTER_PARTY_CUSTOMER_CONTACT_PERSON" Member="MASTER_PARTY" ThisKey="PARTY_CODE" OtherKey="PARTY_CODE" Type="MASTER_PARTY" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIMENSION_CONFIGURATION" Member="DIMENSION_CONFIGURATIONs">
+    <Type Name="DIMENSION_CONFIGURATION">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CONFIG_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DIMENSION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SEQUENCE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="TOOL_DIMENSION_CONFIGURATION_DIMENSION_CONFIGURATION" Member="TOOL_DIMENSION_CONFIGURATION" ThisKey="CONFIG_ID" OtherKey="ID" Type="TOOL_DIMENSION_CONFIGURATION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIMENSION_LOG" Member="DIMENSION_LOGs">
+    <Type Name="DIMENSION_LOG">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PARTY_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ITEM_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOOL_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOOL_SUB_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DIMENTION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VALU" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SUB_DIMENSION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DRL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIMENSION_NAME_LOGS" Member="DIMENSION_NAME_LOGs">
+    <Type Name="DIMENSION_NAME_LOG">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DIMENSION_OLD_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DIMENSION_NEW_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIMENSION_RESTRICTION_MASTER" Member="DIMENSION_RESTRICTION_MASTERs">
+    <Type Name="DIMENSION_RESTRICTION_MASTER">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DIMENSION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UpdatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdatedOn" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIMENTION" Member="DIMENTIONs">
+    <Type Name="DIMENTION">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TOOL_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOOL_SUB_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DIMENTION" Member="DIMENTION1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIMENTION_TYPE_MASTER" Member="DIMENTION_TYPE_MASTERs">
+    <Type Name="DIMENTION_TYPE_MASTER">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DIMENTION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UNIT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SEQUENCE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DISPATCH_DETAILS" Member="DISPATCH_DETAILs">
+    <Type Name="DISPATCH_DETAIL">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="INVNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="INVDT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OCNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DISPQTY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ITMCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PARTY_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DRG_DOCS" Member="DRG_DOCs">
+    <Type Name="DRG_DOC">
+      <Column Name="DRG_ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DRG_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DRG_PATH" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PARTY_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ITEM_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DRL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UPLOADED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UPLOADED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EMP_MASTER" Member="EMP_MASTERs">
+    <Type Name="EMP_MASTER">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EMP_CODEOLD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EMP_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EMP_FNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EMP_MNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EMP_LNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ADDRESS" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="LOCATION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SEX" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CITY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DISTRICT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MARITIAL_STATUS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DOB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DOJ" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DOL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="emp_pwd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="emp_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IN_PROCESS_MASTER" Member="IN_PROCESS_MASTERs">
+    <Type Name="IN_PROCESS_MASTER">
+      <Column Name="STAGE_ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="STAGE_NAME" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.INVOICE" Member="INVOICEs">
+    <Type Name="INVOICE">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="INVNO" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="INVDT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PARTY_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PONO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PODT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ISSTIME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="REMTIME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="REMDT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PAYTERMS1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PAYTERMS2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DISPDTL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PROJTOT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TOTQTY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PLA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RG23A" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RG23C" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NETAMT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PACKPER" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PACKAMT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EXPER" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EXCISE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CSPER" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CESS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="HECESSPER" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="HECESS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TAXTYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STAX" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TOTPER" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TOTAX" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ADDPER" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ADDTAX" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FREIGHT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GRAMT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.INVOICE_DETAIL" Member="INVOICE_DETAILs">
+    <Type Name="INVOICE_DETAIL">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="INVNO" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="INVDT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PARTY_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OCNO" Type="System.String" DbType="NVarChar(110)" CanBeNull="true" />
+      <Column Name="TOOLCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ITEMCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QTY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DISCPER" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DISCAMT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NETPRICE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TOTAMT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="OC_TRANSACTION_INVOICE_DETAIL" Member="OC_TRANSACTION" ThisKey="OCNO" OtherKey="OC_NO" Type="OC_TRANSACTION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MASTER_NOTI" Member="MASTER_NOTIs">
+    <Type Name="MASTER_NOTI">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="NOTI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MASTER_STAGE_TYPE" Member="MASTER_STAGE_TYPEs">
+    <Type Name="MASTER_STAGE_TYPE">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="STAGE_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MASTER_TOOL" Member="MASTER_TOOLs">
+    <Type Name="MASTER_TOOL">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="HSN_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MAIN_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SUB_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SEQUENCE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MASTER_TOOL_SELECTION" Member="MASTER_TOOL_SELECTIONs">
+    <Type Name="MASTER_TOOL_SELECTION">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MAIN_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SUB_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OAL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SHANK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PSDIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SMALLDIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STEPLNGTH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BIGDIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BOREDIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GUIDEDIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GUIDELNGTH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WIDTH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ANGLE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PILOTBORE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MASTER_TOOL_TYPE" Member="MASTER_TOOL_TYPEs">
+    <Type Name="MASTER_TOOL_TYPE">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MASTER_TOOL_TYPE" Member="MASTER_TOOL_TYPE1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SEQUENCE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NOT_ISSUE_MASTER" Member="NOT_ISSUE_MASTERs">
+    <Type Name="NOT_ISSUE_MASTER">
+      <Column Name="STAGE_ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="STAGE_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OC_ACTIONS" Member="OC_ACTIONs">
+    <Type Name="OC_ACTION">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OCNO" Type="System.String" DbType="NVarChar(110) NOT NULL" CanBeNull="false" />
+      <Column Name="REMARKS" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OC_DOCS" Member="OC_DOCs">
+    <Type Name="OC_DOC">
+      <Column Name="DOC_ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OC_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DOC_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DOC_PATH" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UPLOADED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UPLOADED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RAW_MATERIAL" Member="RAW_MATERIALs">
+    <Type Name="RAW_MATERIAL">
+      <Column Name="RM_ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RM_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RM_DESCRIPTION" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="RM_UNIT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SEQUENCE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MARKET_RATE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="RAW_MATERIAL_StockRM" Member="StockRMs" ThisKey="RM_ID" OtherKey="rm_id" Type="StockRM" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RAW_MATERIAL_CONFIG" Member="RAW_MATERIAL_CONFIGs">
+    <Type Name="RAW_MATERIAL_CONFIG">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CONFIG_ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="RAW_MATERIAL" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="TOOL_TYPE_RM_CONFIGURATION_RAW_MATERIAL_CONFIG" Member="TOOL_TYPE_RM_CONFIGURATION" ThisKey="CONFIG_ID" OtherKey="ID" Type="TOOL_TYPE_RM_CONFIGURATION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RAW_MATERIAL_LOG" Member="RAW_MATERIAL_LOGs">
+    <Type Name="RAW_MATERIAL_LOG">
+      <Column Name="RM_ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PARTY_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ITEM_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOOL_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOOL_SUB_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RAW_MATERIAL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RM_VALUE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATION_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="RM_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DIA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WIDTH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="THICKENSS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LENGTH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DRL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RAW_MATERIAL_TRANSACTIONS" Member="RAW_MATERIAL_TRANSACTIONs">
+    <Type Name="RAW_MATERIAL_TRANSACTION">
+      <Column Name="RM_ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OC_NO" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TOOL_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOOL_SUB_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RAW_MATERIAL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RM_VALUE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="RM_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DIA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WIDTH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="THICKNESS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LENGTH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REJECTION" Member="REJECTIONs">
+    <Type Name="REJECTION">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OC_NO" Type="System.String" DbType="NVarChar(110) NOT NULL" CanBeNull="false" />
+      <Column Name="STAGE_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VALUE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DATE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="OC_TRANSACTION_REJECTION" Member="OC_TRANSACTION" ThisKey="OC_NO" OtherKey="OC_NO" Type="OC_TRANSACTION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RM_NAME_LOGS" Member="RM_NAME_LOGs">
+    <Type Name="RM_NAME_LOG">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RM_OLD_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="RM_NEW_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SALVAGE" Member="SALVAGEs">
+    <Type Name="SALVAGE">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OC_NO" Type="System.String" DbType="NVarChar(110) NOT NULL" CanBeNull="false" />
+      <Column Name="STAGE_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VALUE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DATE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CATEGORY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="OC_TRANSACTION_SALVAGE" Member="OC_TRANSACTION" ThisKey="OC_NO" OtherKey="OC_NO" Type="OC_TRANSACTION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.STAGE_LOGS" Member="STAGE_LOGs">
+    <Type Name="STAGE_LOG">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PARTY_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ITEM_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="STAGE_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="STAGE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VALUE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="STAGE_VALUE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.STAGE_MASTER" Member="STAGE_MASTERs">
+    <Type Name="STAGE_MASTER">
+      <Column Name="STAGE_ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="STAGE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="STAGE_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SEQUENCE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.STAGE_NAME_LOGS" Member="STAGE_NAME_LOGs">
+    <Type Name="STAGE_NAME_LOG">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="STAGE_OLD_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="STAGE_NEW_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.STAGE_TRANSACTIONS" Member="STAGE_TRANSACTIONs">
+    <Type Name="STAGE_TRANSACTION">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OC_NO" Type="System.String" DbType="NVarChar(110) NOT NULL" CanBeNull="false" />
+      <Column Name="STAGE_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="STAGE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="VALUE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="STAGE_TYPE_VALUE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="OC_TRANSACTION_STAGE_TRANSACTION" Member="OC_TRANSACTION" ThisKey="OC_NO" OtherKey="OC_NO" Type="OC_TRANSACTION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.STAGE_TYPE_MASTER" Member="STAGE_TYPE_MASTERs">
+    <Type Name="STAGE_TYPE_MASTER">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="STAGE_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SEQUENCE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.STAGE_TYPE_NAME_LOGS" Member="STAGE_TYPE_NAME_LOGs">
+    <Type Name="STAGE_TYPE_NAME_LOG">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NEW_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="OLD_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.STAGES" Member="STAGEs">
+    <Type Name="STAGE">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CONFI_ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="STAGE" Member="STAGE1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="TOOL_STAGES_CONFIGURATION_STAGE" Member="TOOL_STAGES_CONFIGURATION" ThisKey="CONFI_ID" OtherKey="ID" Type="TOOL_STAGES_CONFIGURATION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SUB_TOOL_NAME_LOGS" Member="SUB_TOOL_NAME_LOGs">
+    <Type Name="SUB_TOOL_NAME_LOG">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OLD_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NEW_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TOOL_DIMENSION_CONFIGURATION" Member="TOOL_DIMENSION_CONFIGURATIONs">
+    <Type Name="TOOL_DIMENSION_CONFIGURATION">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TOOL_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOOL_SUB_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[CREATED_ON ]" Member="CREATED_ON_" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[MODIFIED_ON ]" Member="MODIFIED_ON_" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SEQUENCE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="TOOL_DIMENSION_CONFIGURATION_DIMENSION_CONFIGURATION" Member="DIMENSION_CONFIGURATIONs" ThisKey="ID" OtherKey="CONFIG_ID" Type="DIMENSION_CONFIGURATION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TOOL_NAME_LOGS" Member="TOOL_NAME_LOGs">
+    <Type Name="TOOL_NAME_LOG">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OLD_TOOL_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NEW_TOOL_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TOOL_STAGES_CONFIGURATION" Member="TOOL_STAGES_CONFIGURATIONs">
+    <Type Name="TOOL_STAGES_CONFIGURATION">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TOOL_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOOL_SUB_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="STAGE_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="TOOL_STAGES_CONFIGURATION_STAGE" Member="STAGEs" ThisKey="ID" OtherKey="CONFI_ID" Type="STAGE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TOOL_TYPE_RM_CONFIGURATION" Member="TOOL_TYPE_RM_CONFIGURATIONs">
+    <Type Name="TOOL_TYPE_RM_CONFIGURATION">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TOOL_TYPE" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TOOL_SUB_TYPE" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="TOOL_TYPE_RM_CONFIGURATION_RAW_MATERIAL_CONFIG" Member="RAW_MATERIAL_CONFIGs" ThisKey="ID" OtherKey="CONFIG_ID" Type="RAW_MATERIAL_CONFIG" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OC_TRANSACTIONS" Member="OC_TRANSACTIONs">
+    <Type Name="OC_TRANSACTION">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OCNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OCNO_EXTN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OC_NO" Type="System.String" DbType="NVarChar(110) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OCDT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PONO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FOCNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QTNNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QTNDT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OPEN_OC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PARTY_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GRPPRICE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DISC" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NETPRICE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TOOLTYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MATCHTYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ITEM_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DRGNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DESC1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OCQTY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NOT_ISSUE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IN_PROCESS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DESPATCH" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="P_RM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="P_DC" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="P_LDS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="P_OTHER" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="P_YISS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="P_NDS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="OTHER_REM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TURING" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TURNSALV" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TURNSCRAP" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MILLING" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MILLSALV" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MILLSCRAP" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="HT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="HTBEND" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="HTSCRAP" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CYL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CYLSALV" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CYLSCRAP" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TC" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TCSCRAP" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TCSALV" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CLEAN" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SALVAGE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SCRAP" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RMDIA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RMLENGTH" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RMWEIGHT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RMVALUE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MTRL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DIA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="OAL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SHANK" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PSDIA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SMALLDIA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="STEPLNGTH" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BIGDIA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BOREDIA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GUIDEDIA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GUIDELNGTH" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="WIDTH" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ANGLE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PILOTBORE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PAYTERMS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SLTAX" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PACKING" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FREIGHT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DIMENSION" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PO_DATE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AMENDMENT_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AMENDMENT_DATE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UNIT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="OC_TRANSACTION_INVOICE_DETAIL" Member="INVOICE_DETAILs" ThisKey="OC_NO" OtherKey="OCNO" Type="INVOICE_DETAIL" />
+      <Association Name="OC_TRANSACTION_REJECTION" Member="REJECTIONs" ThisKey="OC_NO" OtherKey="OC_NO" Type="REJECTION" />
+      <Association Name="OC_TRANSACTION_SALVAGE" Member="SALVAGEs" ThisKey="OC_NO" OtherKey="OC_NO" Type="SALVAGE" />
+      <Association Name="OC_TRANSACTION_STAGE_TRANSACTION" Member="STAGE_TRANSACTIONs" ThisKey="OC_NO" OtherKey="OC_NO" Type="STAGE_TRANSACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIMENTION_TRANSACTIONS" Member="DIMENTION_TRANSACTIONs">
+    <Type Name="DIMENTION_TRANSACTION">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OC_NO" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TOOL_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOOL_SUB_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DIMENTION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VALU" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SUB_DIMENSION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GST_INV" Member="GST_INVs">
+    <Type Name="GST_INV">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="oc_no" Type="System.String" DbType="NVarChar(110) NOT NULL" CanBeNull="false" />
+      <Column Name="inv_no" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="inv_date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="issue_time" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="removal_time" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="transportation_mode" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="inv_qty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="amount" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="packing" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="freight" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="taxable_value" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="c_gst" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="s_gst" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="i_gst" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="total_amount" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="total_amount_in_words" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="created_by" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="created_on" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="modified_by" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="modified_on" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="note" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MASTER_PARTY" Member="MASTER_PARTies">
+    <Type Name="MASTER_PARTY">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="PARTY_CODE" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PARTY_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SHORT_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FL_ADD" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DIVISION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CITY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PIN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PHONE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NEW_PARTY_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="C1DESIG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CONTACT2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="C2DESIG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VENDCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ECCNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GSTIN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="MASTER_PARTY_CUSTOMER_CONTACT_PERSON" Member="CUSTOMER_CONTACT_PERSONs" ThisKey="PARTY_CODE" OtherKey="PARTY_CODE" Type="CUSTOMER_CONTACT_PERSON" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OC_TRANSACTIONS_LOG" Member="OC_TRANSACTIONS_LOGs">
+    <Type Name="OC_TRANSACTIONS_LOG">
+      <Column Name="TRANSACTION_ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PARTY_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ITEM_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DRL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DRD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DRGNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FOC_NO" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IS_OPEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GROSS_PRICE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DISCOUNT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NET_PRICE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TOOL_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SUB_TOOL_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PO_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PO_DATE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AMENDMENT_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AMENDMENT_DATE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StockRM" Member="StockRMs">
+    <Type Name="StockRM">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="rm_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="stock" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="min_stock" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="max_stock" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="safety_stock" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="batch_no" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="received_date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="total" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="created_by" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="created_on" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="modified_by" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="modified_on" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="RAW_MATERIAL_StockRM" Member="RAW_MATERIAL" ThisKey="rm_id" OtherKey="RM_ID" Type="RAW_MATERIAL" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StockRm_Logs" Member="StockRm_Logs">
+    <Type Name="StockRm_Log">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="rm_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="oc_no" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="stock_plus" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="stock_minus" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="entryDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="batchno" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="total" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="createdby" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="created_on" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="modifiedby" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="modified_on" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SCHEDULE_DETAILS" Member="SCHEDULE_DETAILs">
+    <Type Name="SCHEDULE_DETAIL">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OCNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOOLTYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PARTYCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OQTY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="QTY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SCHDATE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SCHMONTH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SCHYEAR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BAL_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="INV_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UNPLANED_QTY" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_CC_ALREADY_EXISTS" Method="SP_CC_ALREADY_EXISTS">
+    <Parameter Name="PARTY_CODE" Parameter="pARTY_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CC_NAME" Parameter="cC_NAME" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="DEPARTMENT" Parameter="dEPARTMENT" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DESIGNATION" Parameter="dESIGNATION" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EMAIL" Parameter="eMAIL" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MOBILE" Parameter="mOBILE" Type="System.String" DbType="NVarChar(20)" />
+    <ElementType Name="SP_CC_ALREADY_EXISTSResult">
+      <Column Name="PARTY_CODE" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CC_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DEPARTMENT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DESIGNATION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MOBILE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_CC_ALREADY_EXISTS2" Method="SP_CC_ALREADY_EXISTS2">
+    <Parameter Name="CC_ID" Parameter="cC_ID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="PARTY_CODE" Parameter="pARTY_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CC_NAME" Parameter="cC_NAME" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="DEPARTMENT" Parameter="dEPARTMENT" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DESIGNATION" Parameter="dESIGNATION" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EMAIL" Parameter="eMAIL" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MOBILE" Parameter="mOBILE" Type="System.String" DbType="NVarChar(20)" />
+    <ElementType Name="SP_CC_ALREADY_EXISTS2Result">
+      <Column Name="PARTY_CODE" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CC_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DEPARTMENT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DESIGNATION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MOBILE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_CHANGE_DIMENSION_NAME" Method="SP_CHANGE_DIMENSION_NAME">
+    <Parameter Name="OLD_NAME" Parameter="oLD_NAME" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NEW_NAME" Parameter="nEW_NAME" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_CHANGE_LETTER_FUNCTIONS" Method="SP_CHANGE_LETTER_FUNCTIONS">
+    <Parameter Name="PARTY_CODE" Parameter="pARTY_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CHANGE_LETTER" Parameter="cHANGE_LETTER" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CHANGE_DESCRIPTION" Parameter="cHANGE_DESCRIPTION" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_CHANGE_RM_NAME" Method="SP_CHANGE_RM_NAME">
+    <Parameter Name="OLD_NAME" Parameter="oLD_NAME" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NEW_NAME" Parameter="nEW_NAME" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_CHANGE_STAGE_NAME" Method="SP_CHANGE_STAGE_NAME">
+    <Parameter Name="OLD_NAME" Parameter="oLD_NAME" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NEW_NAME" Parameter="nEW_NAME" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_CHANGE_SUB_TOOL_NAME" Method="SP_CHANGE_SUB_TOOL_NAME">
+    <Parameter Name="OLD_NAME" Parameter="oLD_NAME" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NEW_NAME" Parameter="nEW_NAME" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_CHANGE_TOOL_NAME" Method="SP_CHANGE_TOOL_NAME">
+    <Parameter Name="OLD_NAME" Parameter="oLD_NAME" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NEW_NAME" Parameter="nEW_NAME" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_CHECK_SUB_DIM_EXISTS" Method="SP_CHECK_SUB_DIM_EXISTS">
+    <Parameter Name="OCNO" Parameter="oCNO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DIMENSION" Parameter="dIMENSION" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_CHECK_SUB_DIM_EXISTSResult">
+      <Column Name="SUB_DIMENSION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_CUSTOMER_CONTACT_PERSON_FUNCTIONS" Method="SP_CUSTOMER_CONTACT_PERSON_FUNCTIONS">
+    <Parameter Name="CC_ID" Parameter="cC_ID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="PARTY_CODE" Parameter="pARTY_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CC_NAME" Parameter="cC_NAME" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="DEPARTMENT" Parameter="dEPARTMENT" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DESIGNATION" Parameter="dESIGNATION" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EMAIL" Parameter="eMAIL" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MOBILE" Parameter="mOBILE" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="LANDLINE" Parameter="lANDLINE" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CC_INITIAL" Parameter="cC_INITIAL" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="STATUS" Parameter="sTATUS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_DIMENSION_CONFIGURATION_FUNCTIONS" Method="SP_DIMENSION_CONFIGURATION_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="CONFIG_ID" Parameter="cONFIG_ID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DIMENSION" Parameter="dIMENSION" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="SEQUENCE" Parameter="sEQUENCE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_DIMENSION_LOG_FUNCTIONS" Method="SP_DIMENSION_LOG_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="PARTY_CODE" Parameter="pARTY_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ITEM_CODE" Parameter="iTEM_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TOOL_TYPE" Parameter="tOOL_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TOOL_SUB_TYPE" Parameter="tOOL_SUB_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DIMENSION" Parameter="dIMENSION" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="VALUE" Parameter="vALUE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="SUB_DIMENSION" Parameter="sUB_DIMENSION" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DRL" Parameter="dRL" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_DIMENSION_RESTRICTION_MASTER" Method="SP_DIMENSION_RESTRICTION_MASTER">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DIMENSION" Parameter="dIMENSION" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Value" Parameter="value" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CreatedOn" Parameter="createdOn" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="UpdatedBy" Parameter="updatedBy" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="UpdatedOn" Parameter="updatedOn" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_DIMENTION_FUNCTIONS" Method="SP_DIMENTION_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="TOOL_TYPE" Parameter="tOOL_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TOOL_SUB_TYPE" Parameter="tOOL_SUB_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DIMENTION" Parameter="dIMENTION" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_DIMENTION_TRANSACTION_FUNCTIONS" Method="SP_DIMENTION_TRANSACTION_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OC_NO" Parameter="oC_NO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TOOL_TYPE" Parameter="tOOL_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TOOL_SUB_TYPE" Parameter="tOOL_SUB_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DIMENTION" Parameter="dIMENTION" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="VALUE" Parameter="vALUE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="SUB_DIMENSION" Parameter="sUB_DIMENSION" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_DIMENTION_TYPE_MASTER" Method="SP_DIMENTION_TYPE_MASTER">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DIMENTION" Parameter="dIMENTION" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="UNIT" Parameter="uNIT" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SEQUENCE" Parameter="sEQUENCE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="STATUS" Parameter="sTATUS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_DRG_DOCS_FUNCTION" Method="SP_DRG_DOCS_FUNCTION">
+    <Parameter Name="DRG_ID" Parameter="dRG_ID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DRG_NAME" Parameter="dRG_NAME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DRG_PATH" Parameter="dRG_PATH" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PARTY_CODE" Parameter="pARTY_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ITEM_CODE" Parameter="iTEM_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DRL" Parameter="dRL" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="UPLOADED_BY" Parameter="uPLOADED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="UPLOADED_ON" Parameter="uPLOADED_ON" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_EMP_MASTER_FUNCTIONS" Method="SP_EMP_MASTER_FUNCTIONS">
+    <Parameter Name="EMP_CODEOLD" Parameter="eMP_CODEOLD" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EMP_CODE" Parameter="eMP_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EMP_FNAME" Parameter="eMP_FNAME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EMP_MNAME" Parameter="eMP_MNAME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EMP_LNAME" Parameter="eMP_LNAME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ADDRESS" Parameter="aDDRESS" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="LOCATION" Parameter="lOCATION" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SEX" Parameter="sEX" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CITY" Parameter="cITY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DISTRICT" Parameter="dISTRICT" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MARITIAL_STATUS" Parameter="mARITIAL_STATUS" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DOB" Parameter="dOB" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DOJ" Parameter="dOJ" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DOL" Parameter="dOL" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="emp_pwd" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="emp_status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_FIIL_STAGE_DATALIST" Method="SP_FIIL_STAGE_DATALIST">
+    <Parameter Name="STAGE_TYPE" Parameter="sTAGE_TYPE" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="SP_FIIL_STAGE_DATALISTResult">
+      <Column Name="STAGE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_FIIL_SUB_TOOL_TYPE" Method="SP_FIIL_SUB_TOOL_TYPE">
+    <Parameter Name="MAIN_TOOL_TYPE" Parameter="mAIN_TOOL_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_FIIL_SUB_TOOL_TYPEResult">
+      <Column Name="SUB_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_FILL_TOOL_BY_MAIN_TYPE" Method="SP_FILL_TOOL_BY_MAIN_TYPE" IsComposable="true">
+    <Parameter Name="MAIN_TOOL_TYPE" Parameter="mAIN_TOOL_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.SP_GET_CC_DATA" Method="SP_GET_CC_DATA">
+    <Parameter Name="PARTY_CODE" Parameter="pARTY_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_GET_CC_DATAResult">
+      <Column Name="CC_ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="PARTY_CODE" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CC_NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DEPARTMENT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DESIGNATION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MOBILE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="LANDLINE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GET_DATA_TO_MAIN_SUB_TYPE" Method="SP_GET_DATA_TO_MAIN_SUB_TYPE">
+    <Parameter Name="MAIN_TYPE" Parameter="mAIN_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_GET_DATA_TO_MAIN_SUB_TYPEResult">
+      <Column Name="SUB_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GET_DIMENSION_ID_BY_TOOLS" Method="SP_GET_DIMENSION_ID_BY_TOOLS">
+    <Parameter Name="TOOL_TYPE" Parameter="tOOL_TYPE" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="SUB_TOOL_TYPE" Parameter="sUB_TOOL_TYPE" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="SP_GET_DIMENSION_ID_BY_TOOLSResult">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GET_EMP_MASTER_DATA" Method="SP_GET_EMP_MASTER_DATA">
+    <Parameter Name="EMP_CODE" Parameter="eMP_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_GET_EMP_MASTER_DATAResult">
+      <Column Name="EMP_FNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EMP_MNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EMP_LNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ADDRESS" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="LOCATION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CITY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DISTRICT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SEX" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MARITIAL_STATUS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DOB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DOJ" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DOL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="emp_pwd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="emp_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CREATED_ON" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_ON" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GET_EMP_MASTER_DETAILS" Method="SP_GET_EMP_MASTER_DETAILS">
+    <ElementType Name="SP_GET_EMP_MASTER_DETAILSResult">
+      <Column Name="EMP_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Employee Name]" Member="Employee_Name" Type="System.String" DbType="NVarChar(101)" CanBeNull="true" />
+      <Column Name="SEX" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MARITIAL_STATUS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DOB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DOJ" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DOL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GET_FOC_NUMBER" Method="SP_GET_FOC_NUMBER">
+    <Parameter Name="PARTY_CODE" Parameter="pARTY_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ITEM_CODE" Parameter="iTEM_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_GET_FOC_NUMBERResult">
+      <Column Name="OC_NO" Type="System.String" DbType="NVarChar(110) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GET_MASTER_PARTY_DATA" Method="SP_GET_MASTER_PARTY_DATA" IsComposable="true">
+    <Parameter Name="PARTY_CODE" Parameter="pARTY_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.SP_GET_MASTER_TOOL_DATA" Method="SP_GET_MASTER_TOOL_DATA">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="SP_GET_MASTER_TOOL_DATAResult">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="HSN_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MAIN_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SUB_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SEQUENCE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GET_OC_UPDATION_DATA" Method="SP_GET_OC_UPDATION_DATA">
+    <Parameter Name="OC_NO" Parameter="oC_NO" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_GET_OC_UPDATION_DATAResult">
+      <Column Name="ITEM_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DRGNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PARTY_CODE" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="OCQTY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TOOLTYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MATCHTYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GET_RM_ON_OC" Method="SP_GET_RM_ON_OC">
+    <Parameter Name="TOOL_TYPE" Parameter="tOOL_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SUB_TOOL_TYPE" Parameter="sUB_TOOL_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_GET_RM_ON_OCResult">
+      <Column Name="RAW_MATERIAL" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GET_SCHEDULE_DATA" Method="SP_GET_SCHEDULE_DATA">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="SP_GET_SCHEDULE_DATAResult">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OCNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOOLTYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PARTYCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OQTY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="QTY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SCHDATE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GET_SCHEDULE_DETAILS" Method="SP_GET_SCHEDULE_DETAILS">
+    <Parameter Name="OCNO" Parameter="oCNO" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_GET_SCHEDULE_DETAILSResult">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OCNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOOLTYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PARTYCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OQTY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="QTY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SCHDATE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GET_SCHEDULE_DETAILS_BY_OCNO" Method="SP_GET_SCHEDULE_DETAILS_BY_OCNO">
+    <Parameter Name="OCNO" Parameter="oCNO" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_GET_SCHEDULE_DETAILS_BY_OCNOResult">
+      <Column Name="OCNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOOLTYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PARTYCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OQTY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="QTY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SCHDATE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GET_STAGE_VALUE" Method="SP_GET_STAGE_VALUE">
+    <Parameter Name="OC_NO" Parameter="oC_NO" Type="System.String" DbType="NVarChar(110)" />
+    <Parameter Name="STAGE" Parameter="sTAGE" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_GET_STAGE_VALUEResult">
+      <Column Name="VALUE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_GET_VALUE_FOR_CLEANING" Method="SP_GET_VALUE_FOR_CLEANING">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OC_NO" Parameter="oC_NO" Type="System.String" DbType="NVarChar(110)" />
+    <Parameter Name="STAGE_TYPE" Parameter="sTAGE_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="STAGE" Parameter="sTAGE" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="VALUE" Parameter="vALUE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="STAGE_TYPE_VALUE" Parameter="sTAGE_TYPE_VALUE" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_GET_VALUE_FOR_DISPATCHED" Method="SP_GET_VALUE_FOR_DISPATCHED">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OC_NO" Parameter="oC_NO" Type="System.String" DbType="NVarChar(110)" />
+    <Parameter Name="STAGE_TYPE" Parameter="sTAGE_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="STAGE" Parameter="sTAGE" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="VALUE" Parameter="vALUE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="STAGE_TYPE_VALUE" Parameter="sTAGE_TYPE_VALUE" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_GET_VALUE_IN_ISSUE" Method="SP_GET_VALUE_IN_ISSUE">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OC_NO" Parameter="oC_NO" Type="System.String" DbType="NVarChar(110)" />
+    <Parameter Name="STAGE_TYPE" Parameter="sTAGE_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="STAGE" Parameter="sTAGE" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="VALUE" Parameter="vALUE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="STAGE_TYPE_VALUE" Parameter="sTAGE_TYPE_VALUE" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_GET_VALUE_UPDATE_FOR_DISPATCHED" Method="SP_GET_VALUE_UPDATE_FOR_DISPATCHED">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OC_NO" Parameter="oC_NO" Type="System.String" DbType="NVarChar(110)" />
+    <Parameter Name="STAGE_TYPE" Parameter="sTAGE_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="STAGE" Parameter="sTAGE" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="VALUE" Parameter="vALUE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="STAGE_TYPE_VALUE" Parameter="sTAGE_TYPE_VALUE" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_INVOICE_FUNCTIONS" Method="SP_INVOICE_FUNCTIONS">
+    <Parameter Name="INVNO" Parameter="iNVNO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="INVDT" Parameter="iNVDT" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PARTY_CODE" Parameter="pARTY_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="OCNO" Parameter="oCNO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TOOLCODE" Parameter="tOOLCODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ITEMCODE" Parameter="iTEMCODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="QTY" Parameter="qTY" Type="System.Double" DbType="Float" />
+    <Parameter Name="PRICE" Parameter="pRICE" Type="System.Double" DbType="Float" />
+    <Parameter Name="DISCPER" Parameter="dISCPER" Type="System.Double" DbType="Float" />
+    <Parameter Name="DISCAMT" Parameter="dISCAMT" Type="System.Double" DbType="Float" />
+    <Parameter Name="NETPRICE" Parameter="nETPRICE" Type="System.Double" DbType="Float" />
+    <Parameter Name="TOTAMT" Parameter="tOTAMT" Type="System.Double" DbType="Float" />
+    <Parameter Name="PONO" Parameter="pONO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PODT" Parameter="pODT" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ISSTIME" Parameter="iSSTIME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="REMTIME" Parameter="rEMTIME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="REMDT" Parameter="rEMDT" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PAYTERMS1" Parameter="pAYTERMS1" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PAYTERMS2" Parameter="pAYTERMS2" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DISPDTL" Parameter="dISPDTL" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PROJTOT" Parameter="pROJTOT" Type="System.Double" DbType="Float" />
+    <Parameter Name="TOTQTY" Parameter="tOTQTY" Type="System.Double" DbType="Float" />
+    <Parameter Name="PLA" Parameter="pLA" Type="System.Double" DbType="Float" />
+    <Parameter Name="RG23A" Parameter="rG23A" Type="System.Double" DbType="Float" />
+    <Parameter Name="RG23C" Parameter="rG23C" Type="System.Double" DbType="Float" />
+    <Parameter Name="NETAMT" Parameter="nETAMT" Type="System.Double" DbType="Float" />
+    <Parameter Name="PACKPER" Parameter="pACKPER" Type="System.Double" DbType="Float" />
+    <Parameter Name="PACKAMT" Parameter="pACKAMT" Type="System.Double" DbType="Float" />
+    <Parameter Name="EXPER" Parameter="eXPER" Type="System.Double" DbType="Float" />
+    <Parameter Name="EXCISE" Parameter="eXCISE" Type="System.Double" DbType="Float" />
+    <Parameter Name="CSPER" Parameter="cSPER" Type="System.Double" DbType="Float" />
+    <Parameter Name="CESS" Parameter="cESS" Type="System.Double" DbType="Float" />
+    <Parameter Name="HECESSPER" Parameter="hECESSPER" Type="System.Double" DbType="Float" />
+    <Parameter Name="HECESS" Parameter="hECESS" Type="System.Double" DbType="Float" />
+    <Parameter Name="TAXTYPE" Parameter="tAXTYPE" Type="System.Double" DbType="Float" />
+    <Parameter Name="STAX" Parameter="sTAX" Type="System.Double" DbType="Float" />
+    <Parameter Name="TOTPER" Parameter="tOTPER" Type="System.Double" DbType="Float" />
+    <Parameter Name="TOTAX" Parameter="tOTAX" Type="System.Double" DbType="Float" />
+    <Parameter Name="ADDPER" Parameter="aDDPER" Type="System.Double" DbType="Float" />
+    <Parameter Name="ADDTAX" Parameter="aDDTAX" Type="System.Double" DbType="Float" />
+    <Parameter Name="FREIGHT" Parameter="fREIGHT" Type="System.Double" DbType="Float" />
+    <Parameter Name="GRAMT" Parameter="gRAMT" Type="System.Double" DbType="Float" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_MANAGE_PARTY_MASTER" Method="SP_MANAGE_PARTY_MASTER">
+    <ElementType Name="SP_MANAGE_PARTY_MASTERResult">
+      <Column Name="PARTY_CODE" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PARTY_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GSTIN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CITY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PHONE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_MASTER_STAGE_TYPE_FUNCTIONS" Method="SP_MASTER_STAGE_TYPE_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="STAGE_TYPE" Parameter="sTAGE_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_MASTER_TOOL_TYPE_FUNCTIONS" Method="SP_MASTER_TOOL_TYPE_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="MASTER_TOOL_TYPE" Parameter="mASTER_TOOL_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SEQUENCE" Parameter="sEQUENCE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="STATUS" Parameter="sTATUS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_OC_ACTIONS_TRANSACTIONS_FUNCTIONS" Method="SP_OC_ACTIONS_TRANSACTIONS_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OCNO" Parameter="oCNO" Type="System.String" DbType="NVarChar(110)" />
+    <Parameter Name="REMARKS" Parameter="rEMARKS" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="STATUS" Parameter="sTATUS" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_OC_DOCS_FUNCTIONS" Method="SP_OC_DOCS_FUNCTIONS">
+    <Parameter Name="DOC_ID" Parameter="dOC_ID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OC_NO" Parameter="oC_NO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DOC_NAME" Parameter="dOC_NAME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DOC_PATH" Parameter="dOC_PATH" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="UPLOADED_BY" Parameter="uPLOADED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="UPLOADED_ON" Parameter="uPLOADED_ON" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_OC_ENTRIES" Method="SP_OC_ENTRIES">
+    <ElementType Name="SP_OC_ENTRIESResult">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OC_NO" Type="System.String" DbType="NVarChar(110) NOT NULL" CanBeNull="false" />
+      <Column Name="OCDT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PARTY_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ITEM_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOOLTYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MATCHTYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OCQTY" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_PARTY_MASTER_FUNCTIONS" Method="SP_PARTY_MASTER_FUNCTIONS" IsComposable="true">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="PARTY_CODE" Parameter="pARTY_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PARTY_NAME" Parameter="pARTY_NAME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SHORT_NAME" Parameter="sHORT_NAME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FL_ADD" Parameter="fL_ADD" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SL_ADD" Parameter="sL_ADD" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CITY" Parameter="cITY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PIN" Parameter="pIN" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PHONE" Parameter="pHONE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FAX" Parameter="fAX" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CONTACT1" Parameter="cONTACT1" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="C1DESIG" Parameter="c1DESIG" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CONTACT2" Parameter="cONTACT2" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="C2DESIG" Parameter="c2DESIG" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="VENDCODE" Parameter="vENDCODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ECCNO" Parameter="eCCNO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CSTNO" Parameter="cSTNO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.SP_RAW_MATERIAL_FUNCTIONS" Method="SP_RAW_MATERIAL_FUNCTIONS">
+    <Parameter Name="RM_ID" Parameter="rM_ID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="RM_NAME" Parameter="rM_NAME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="RM_DESCRIPTION" Parameter="rM_DESCRIPTION" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="RM_UNIT" Parameter="rM_UNIT" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SEQUENCE" Parameter="sEQUENCE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="STATUS" Parameter="sTATUS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MARKET_RATE" Parameter="mARKET_RATE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_REJECTION_FUNCTIONS" Method="SP_REJECTION_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OC_NO" Parameter="oC_NO" Type="System.String" DbType="NVarChar(110)" />
+    <Parameter Name="STAGE_NAME" Parameter="sTAGE_NAME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="VALUE" Parameter="vALUE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DATE" Parameter="dATE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DESCRIPTION" Parameter="dESCRIPTION" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="STATUS" Parameter="sTATUS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_REMOVE_SALVAGE_REJECTION_FUCNTIONS" Method="SP_REMOVE_SALVAGE_REJECTION_FUCNTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="VALUE" Parameter="vALUE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OCNO" Parameter="oCNO" Type="System.String" DbType="NVarChar(110)" />
+    <Parameter Name="STAGE_NAME" Parameter="sTAGE_NAME" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_RM_CONFIG" Method="SP_RM_CONFIG">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="CONFIG_ID" Parameter="cONFIG_ID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="RAW_MATERIAL" Parameter="rAW_MATERIAL" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_RM_LOG_FUNCTIONS" Method="SP_RM_LOG_FUNCTIONS">
+    <Parameter Name="RM_ID" Parameter="rM_ID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="PARTY_CODE" Parameter="pARTY_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ITEM_CODE" Parameter="iTEM_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TOOL_TYPE" Parameter="tOOL_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TOOL_SUB_TYPE" Parameter="tOOL_SUB_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="RAW_MATERIAL" Parameter="rAW_MATERIAL" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="RM_VALUE" Parameter="rM_VALUE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATION_ON" Parameter="cREATION_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="RM_TYPE" Parameter="rM_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DIA" Parameter="dIA" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="WIDTH" Parameter="wIDTH" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="THICKENSS" Parameter="tHICKENSS" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LENGTH" Parameter="lENGTH" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DRL" Parameter="dRL" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_RM_TRANSACTION_FUNCTIONS" Method="SP_RM_TRANSACTION_FUNCTIONS">
+    <Parameter Name="RM_ID" Parameter="rM_ID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OC_NO" Parameter="oC_NO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TOOL_TYPE" Parameter="tOOL_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TOOL_SUB_TYPE" Parameter="tOOL_SUB_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="RAW_MATERIAL" Parameter="rAW_MATERIAL" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="RM_VALUE" Parameter="rM_VALUE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="RM_TYPE" Parameter="rM_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DIA" Parameter="dIA" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="WIDTH" Parameter="wIDTH" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="THICKNESS" Parameter="tHICKNESS" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LENGTH" Parameter="lENGTH" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_SALVAGE_FUNCTIONS" Method="SP_SALVAGE_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OC_NO" Parameter="oC_NO" Type="System.String" DbType="NVarChar(110)" />
+    <Parameter Name="STAGE_NAME" Parameter="sTAGE_NAME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="VALUE" Parameter="vALUE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DATE" Parameter="dATE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DESCRIPTION" Parameter="dESCRIPTION" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="STATUS" Parameter="sTATUS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CATEGORY" Parameter="cATEGORY" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_STAGE_LIST_BY_MAIN_STAGE" Method="SP_STAGE_LIST_BY_MAIN_STAGE">
+    <Parameter Name="MIANTYPE" Parameter="mIANTYPE" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_STAGE_LIST_BY_MAIN_STAGEResult">
+      <Column Name="STAGE_ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="STAGE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="STAGE_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SEQUENCE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_STAGE_LOG_FUNCTIONS" Method="SP_STAGE_LOG_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="PARTY_CODE" Parameter="pARTY_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ITEM_CODE" Parameter="iTEM_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="STAGE_TYPE" Parameter="sTAGE_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="STAGE" Parameter="sTAGE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="VALUE" Parameter="vALUE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="STAGE_VALUE" Parameter="sTAGE_VALUE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_STAGE_MASTER_FUNCTIONS" Method="SP_STAGE_MASTER_FUNCTIONS">
+    <Parameter Name="STAGE_ID" Parameter="sTAGE_ID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="STAGE" Parameter="sTAGE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="STAGE_TYPE" Parameter="sTAGE_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="IO" Parameter="iO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SEQUENCE" Parameter="sEQUENCE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="STATUS" Parameter="sTATUS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_STAGE_TRANSACTION_FUNCTIONS" Method="SP_STAGE_TRANSACTION_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OC_NO" Parameter="oC_NO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="STAGE_TYPE" Parameter="sTAGE_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="STAGE" Parameter="sTAGE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="VALUE" Parameter="vALUE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="STAGE_TYPE_VALUE" Parameter="sTAGE_TYPE_VALUE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_STAGE_TYPE_MASTER_FUNCTIONS" Method="SP_STAGE_TYPE_MASTER_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="STAGE_TYPE" Parameter="sTAGE_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SEQUENCE" Parameter="sEQUENCE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="STATUS" Parameter="sTATUS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_STAGES_FUNCTIONS" Method="SP_STAGES_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="CONFIG_ID" Parameter="cONFIG_ID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="STAGE" Parameter="sTAGE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_TOOL_DIMENSION_CONFIGURATION_FUNCTIONS" Method="SP_TOOL_DIMENSION_CONFIGURATION_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="TOOL_TYPE" Parameter="tOOL_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TOOL_SUB_TYPE" Parameter="tOOL_SUB_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="STATUS" Parameter="sTATUS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SEQUENCE" Parameter="sEQUENCE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_TOOL_TYPE_FUNCTIONS" Method="SP_TOOL_TYPE_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="TOOL_TYPE" Parameter="tOOL_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MAIN_TYPE" Parameter="mAIN_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SUB_TYPE" Parameter="sUB_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SEQUENCE" Parameter="sEQUENCE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="STATUS" Parameter="sTATUS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_TOOL_TYPE_RM_CONFIGURATION_FUNCTIONS" Method="SP_TOOL_TYPE_RM_CONFIGURATION_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="TOOL_TYPE" Parameter="tOOL_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TOOL_SUB_TYPE" Parameter="tOOL_SUB_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="STATUS" Parameter="sTATUS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_TOOL_TYPE_STAGES_CONFIGURATION" Method="SP_TOOL_TYPE_STAGES_CONFIGURATION">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="TOOL_TYPE" Parameter="tOOL_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TOOL_SUB_TYPE" Parameter="tOOL_SUB_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="STAGE_TYPE" Parameter="sTAGE_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="STATUS" Parameter="sTATUS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_UPDATE_IN_PROCESS" Method="SP_UPDATE_IN_PROCESS">
+    <Parameter Name="OC_NO" Parameter="oC_NO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="IN_PROCESS" Parameter="iN_PROCESS" Type="System.Double" DbType="Float" />
+    <Parameter Name="TURING" Parameter="tURING" Type="System.Double" DbType="Float" />
+    <Parameter Name="MILLING" Parameter="mILLING" Type="System.Double" DbType="Float" />
+    <Parameter Name="HT" Parameter="hT" Type="System.Double" DbType="Float" />
+    <Parameter Name="HTBEND" Parameter="hTBEND" Type="System.Double" DbType="Float" />
+    <Parameter Name="CYL" Parameter="cYL" Type="System.Double" DbType="Float" />
+    <Parameter Name="TC" Parameter="tC" Type="System.Double" DbType="Float" />
+    <Parameter Name="CLEAN" Parameter="cLEAN" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_UPDATE_NOT_ISSUE" Method="SP_UPDATE_NOT_ISSUE">
+    <Parameter Name="OCNO" Parameter="oCNO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="NOT_ISSUE" Parameter="nOT_ISSUE" Type="System.Double" DbType="Float" />
+    <Parameter Name="P_DC" Parameter="p_DC" Type="System.Double" DbType="Float" />
+    <Parameter Name="P_RM" Parameter="p_RM" Type="System.Double" DbType="Float" />
+    <Parameter Name="P_LDS" Parameter="p_LDS" Type="System.Double" DbType="Float" />
+    <Parameter Name="P_NDS" Parameter="p_NDS" Type="System.Double" DbType="Float" />
+    <Parameter Name="P_YISS" Parameter="p_YISS" Type="System.Double" DbType="Float" />
+    <Parameter Name="P_OTHER" Parameter="p_OTHER" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_UPDATE_REJECTION_FUNCTIONS" Method="SP_UPDATE_REJECTION_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OC_NO" Parameter="oC_NO" Type="System.String" DbType="NVarChar(110)" />
+    <Parameter Name="STAGE_NAME" Parameter="sTAGE_NAME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="VALUE" Parameter="vALUE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DATE" Parameter="dATE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DESCRIPTION" Parameter="dESCRIPTION" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="STATUS" Parameter="sTATUS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_UPDATE_SALVAGE_FUNCTIONS" Method="SP_UPDATE_SALVAGE_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OC_NO" Parameter="oC_NO" Type="System.String" DbType="NVarChar(110)" />
+    <Parameter Name="STAGE_NAME" Parameter="sTAGE_NAME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="VALUE" Parameter="vALUE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DATE" Parameter="dATE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DESCRIPTION" Parameter="dESCRIPTION" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="STATUS" Parameter="sTATUS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_UPDATE_SCHEDULE_FUNCTION" Method="SP_UPDATE_SCHEDULE_FUNCTION">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OCNO" Parameter="oCNO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TOOLTYPE" Parameter="tOOLTYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PARTYCODE" Parameter="pARTYCODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PRICE" Parameter="pRICE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="OQTY" Parameter="oQTY" Type="System.Double" DbType="Float" />
+    <Parameter Name="QTY" Parameter="qTY" Type="System.Double" DbType="Float" />
+    <Parameter Name="SCHDATE" Parameter="sCHDATE" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_USER_LOGIN" Method="SP_USER_LOGIN">
+    <Parameter Name="email" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_USER_LOGINResult">
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="emp_pwd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_OC_Transactions_Functions" Method="SP_OC_Transactions_Functions">
+    <Parameter Name="OCNO" Parameter="oCNO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="OCNO_EXTN" Parameter="oCNO_EXTN" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="OC_NO" Parameter="oC_NO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="OCDT" Parameter="oCDT" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PONO" Parameter="pONO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FOCNO" Parameter="fOCNO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="QTNNO" Parameter="qTNNO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="QTNDT" Parameter="qTNDT" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="OPEN_OC" Parameter="oPEN_OC" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PARTY_CODE" Parameter="pARTY_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="GRPPRICE" Parameter="gRPPRICE" Type="System.Double" DbType="Float" />
+    <Parameter Name="DISC" Parameter="dISC" Type="System.Double" DbType="Float" />
+    <Parameter Name="NETPRICE" Parameter="nETPRICE" Type="System.Double" DbType="Float" />
+    <Parameter Name="TOOLTYPE" Parameter="tOOLTYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MATCHTYPE" Parameter="mATCHTYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ITEM_CODE" Parameter="iTEM_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DRGNO" Parameter="dRGNO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DESC1" Parameter="dESC1" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="OCQTY" Parameter="oCQTY" Type="System.Double" DbType="Float" />
+    <Parameter Name="NOT_ISSUE" Parameter="nOT_ISSUE" Type="System.Double" DbType="Float" />
+    <Parameter Name="IN_PROCESS" Parameter="iN_PROCESS" Type="System.Double" DbType="Float" />
+    <Parameter Name="DESPATCH" Parameter="dESPATCH" Type="System.Double" DbType="Float" />
+    <Parameter Name="P_RM" Parameter="p_RM" Type="System.Double" DbType="Float" />
+    <Parameter Name="P_DC" Parameter="p_DC" Type="System.Double" DbType="Float" />
+    <Parameter Name="P_LDS" Parameter="p_LDS" Type="System.Double" DbType="Float" />
+    <Parameter Name="P_OTHER" Parameter="p_OTHER" Type="System.Double" DbType="Float" />
+    <Parameter Name="P_YISS" Parameter="p_YISS" Type="System.Double" DbType="Float" />
+    <Parameter Name="P_NDS" Parameter="p_NDS" Type="System.Double" DbType="Float" />
+    <Parameter Name="OTHER_REM" Parameter="oTHER_REM" Type="System.Double" DbType="Float" />
+    <Parameter Name="TURING" Parameter="tURING" Type="System.Double" DbType="Float" />
+    <Parameter Name="TURNSALV" Parameter="tURNSALV" Type="System.Double" DbType="Float" />
+    <Parameter Name="TURNSCRAP" Parameter="tURNSCRAP" Type="System.Double" DbType="Float" />
+    <Parameter Name="MILLING" Parameter="mILLING" Type="System.Double" DbType="Float" />
+    <Parameter Name="MILLSALV" Parameter="mILLSALV" Type="System.Double" DbType="Float" />
+    <Parameter Name="MILLSCRAP" Parameter="mILLSCRAP" Type="System.Double" DbType="Float" />
+    <Parameter Name="HT" Parameter="hT" Type="System.Double" DbType="Float" />
+    <Parameter Name="HTBEND" Parameter="hTBEND" Type="System.Double" DbType="Float" />
+    <Parameter Name="HTSCRAP" Parameter="hTSCRAP" Type="System.Double" DbType="Float" />
+    <Parameter Name="CYL" Parameter="cYL" Type="System.Double" DbType="Float" />
+    <Parameter Name="CYLSALV" Parameter="cYLSALV" Type="System.Double" DbType="Float" />
+    <Parameter Name="CYLSCRAP" Parameter="cYLSCRAP" Type="System.Double" DbType="Float" />
+    <Parameter Name="TC" Parameter="tC" Type="System.Double" DbType="Float" />
+    <Parameter Name="TCSCRAP" Parameter="tCSCRAP" Type="System.Double" DbType="Float" />
+    <Parameter Name="TCSALV" Parameter="tCSALV" Type="System.Double" DbType="Float" />
+    <Parameter Name="CLEAN" Parameter="cLEAN" Type="System.Double" DbType="Float" />
+    <Parameter Name="SALVAGE" Parameter="sALVAGE" Type="System.Double" DbType="Float" />
+    <Parameter Name="SCRAP" Parameter="sCRAP" Type="System.Double" DbType="Float" />
+    <Parameter Name="RMDIA" Parameter="rMDIA" Type="System.Double" DbType="Float" />
+    <Parameter Name="RMLENGTH" Parameter="rMLENGTH" Type="System.Double" DbType="Float" />
+    <Parameter Name="RMWEIGHT" Parameter="rMWEIGHT" Type="System.Double" DbType="Float" />
+    <Parameter Name="RMVALUE" Parameter="rMVALUE" Type="System.Double" DbType="Float" />
+    <Parameter Name="MTRL" Parameter="mTRL" Type="System.Double" DbType="Float" />
+    <Parameter Name="DIA" Parameter="dIA" Type="System.Double" DbType="Float" />
+    <Parameter Name="FL" Parameter="fL" Type="System.Double" DbType="Float" />
+    <Parameter Name="OAL" Parameter="oAL" Type="System.Double" DbType="Float" />
+    <Parameter Name="SHANK" Parameter="sHANK" Type="System.Double" DbType="Float" />
+    <Parameter Name="PSDIA" Parameter="pSDIA" Type="System.Double" DbType="Float" />
+    <Parameter Name="SMALLDIA" Parameter="sMALLDIA" Type="System.Double" DbType="Float" />
+    <Parameter Name="STEPLNGTH" Parameter="sTEPLNGTH" Type="System.Double" DbType="Float" />
+    <Parameter Name="BIGDIA" Parameter="bIGDIA" Type="System.Double" DbType="Float" />
+    <Parameter Name="BOREDIA" Parameter="bOREDIA" Type="System.Double" DbType="Float" />
+    <Parameter Name="GUIDEDIA" Parameter="gUIDEDIA" Type="System.Double" DbType="Float" />
+    <Parameter Name="GUIDELNGTH" Parameter="gUIDELNGTH" Type="System.Double" DbType="Float" />
+    <Parameter Name="WIDTH" Parameter="wIDTH" Type="System.Double" DbType="Float" />
+    <Parameter Name="ANGLE" Parameter="aNGLE" Type="System.Double" DbType="Float" />
+    <Parameter Name="PILOTBORE" Parameter="pILOTBORE" Type="System.Double" DbType="Float" />
+    <Parameter Name="PAYTERMS" Parameter="pAYTERMS" Type="System.Double" DbType="Float" />
+    <Parameter Name="SLTAX" Parameter="sLTAX" Type="System.Double" DbType="Float" />
+    <Parameter Name="PACKING" Parameter="pACKING" Type="System.Double" DbType="Float" />
+    <Parameter Name="FREIGHT" Parameter="fREIGHT" Type="System.Double" DbType="Float" />
+    <Parameter Name="DIMENSION" Parameter="dIMENSION" Type="System.Double" DbType="Float" />
+    <Parameter Name="STATUS" Parameter="sTATUS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PO_DATE" Parameter="pO_DATE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="AMENDMENT_NO" Parameter="aMENDMENT_NO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="AMENDMENT_DATE" Parameter="aMENDMENT_DATE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="unit" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="action" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_GET_OC_TRANSACTIONS_DETAILS" Method="SP_GET_OC_TRANSACTIONS_DETAILS">
+    <Parameter Name="OCNO" Parameter="oCNO" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SP_GET_OC_TRANSACTIONS_DETAILSResult">
+      <Column Name="OC_NO" Type="System.String" DbType="NVarChar(110) NOT NULL" CanBeNull="false" />
+      <Column Name="OCDT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PARTY_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ITEM_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DRGNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FOCNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OPEN_OC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GRPPRICE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DISC" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NETPRICE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TOOLTYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MATCHTYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DESC1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OCQTY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PONO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PO_DATE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AMENDMENT_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AMENDMENT_DATE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UNIT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_create_inv" Method="sp_create_inv">
+    <Parameter Name="oc_no" Type="System.String" DbType="NVarChar(110)" />
+    <Parameter Name="inv_no" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="inv_date" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="issue_time" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="removal_time" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="transportation_mode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="inv_qty" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="amount" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="packing" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="freight" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="taxable_value" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="c_gst" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="s_gst" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="i_gst" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="total_amount" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="total_amount_in_words" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="created_by" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="created_on" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="modified_by" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="modified_on" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="note" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="action" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_MASTER_PARTY_FUNCTIONS" Method="SP_MASTER_PARTY_FUNCTIONS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="PARTY_CODE" Parameter="pARTY_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PARTY_NAME" Parameter="pARTY_NAME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SHORT_NAME" Parameter="sHORT_NAME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FL_ADD" Parameter="fL_ADD" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="DIVISION" Parameter="dIVISION" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CITY" Parameter="cITY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PIN" Parameter="pIN" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PHONE" Parameter="pHONE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EMAIL" Parameter="eMAIL" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="NEW_PARTY_CODE" Parameter="nEW_PARTY_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="C1DESIG" Parameter="c1DESIG" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CONTACT2" Parameter="cONTACT2" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="C2DESIG" Parameter="c2DESIG" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="VENDCODE" Parameter="vENDCODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ECCNO" Parameter="eCCNO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CSTNO" Parameter="cSTNO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="STATUS" Parameter="sTATUS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_OC_TRANSACTIONS_LOG_FUNCTIONS" Method="SP_OC_TRANSACTIONS_LOG_FUNCTIONS">
+    <Parameter Name="TRANSACTION_ID" Parameter="tRANSACTION_ID" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DATE" Parameter="dATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="PARTY_CODE" Parameter="pARTY_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ITEM_CODE" Parameter="iTEM_CODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DRL" Parameter="dRL" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DRD" Parameter="dRD" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DRGNO" Parameter="dRGNO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FOC_NO" Parameter="fOC_NO" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="IS_OPEN" Parameter="iS_OPEN" Type="System.String" DbType="NVarChar(1)" />
+    <Parameter Name="GROSS_PRICE" Parameter="gROSS_PRICE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DISCOUNT" Parameter="dISCOUNT" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NET_PRICE" Parameter="nET_PRICE" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DESCRIPTION" Parameter="dESCRIPTION" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TOOL_TYPE" Parameter="tOOL_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SUB_TOOL_TYPE" Parameter="sUB_TOOL_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="PO_NO" Parameter="pO_NO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PO_DATE" Parameter="pO_DATE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="AMENDMENT_NO" Parameter="aMENDMENT_NO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="AMENDMENT_DATE" Parameter="aMENDMENT_DATE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_RMSTOCK" Method="SP_RMSTOCK">
+    <Parameter Name="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="rm_id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="stock" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="min_stock" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="max_stock" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="safety_stock" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="batch_no" Type="System.String" DbType="NVarChar(256)" />
+    <Parameter Name="received_date" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="total" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="created_by" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="created_on" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="modified_by" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="modified_on" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RMSTOCK_LOGS" Method="RMSTOCK_LOGS">
+    <Parameter Name="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="rm_id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="oc_no" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="stock_plus" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="stock_minus" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="entryDate" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="batchno" Type="System.String" DbType="NVarChar(256)" />
+    <Parameter Name="total" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="createdby" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="created_on" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="modifiedby" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="modified_on" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_STAGE_LOAD_RPT" Method="SP_STAGE_LOAD_RPT">
+    <Parameter Name="STAGE" Parameter="sTAGE" Type="System.String" DbType="NVarChar(1)" />
+    <Parameter Name="TOOLTYPE" Parameter="tOOLTYPE" Type="System.String" DbType="NVarChar(1)" />
+    <ElementType Name="SP_STAGE_LOAD_RPTResult">
+      <Column Name="OC_NO" Type="System.String" DbType="NVarChar(110) NOT NULL" CanBeNull="false" />
+      <Column Name="PARTY_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="STAGE_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="STAGE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="QUANTITY" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="TOTAL_VALUE" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_BOOKING_RPT" Method="SP_BOOKING_RPT">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="MONTH" Parameter="mONTH" Type="System.Int32" DbType="Int" />
+    <Parameter Name="YEAR" Parameter="yEAR" Type="System.Int32" DbType="Int" />
+    <Parameter Name="WEEK" Parameter="wEEK" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TOOLTYPE" Parameter="tOOLTYPE" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="QTY" Parameter="qTY" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="VALUE" Parameter="vALUE" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="TYPE" Parameter="tYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_SCHEDULE_DETAILS_FUNCTIONS" Method="SP_SCHEDULE_DETAILS_FUNCTIONS">
+    <Parameter Name="OCNO" Parameter="oCNO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TOOLTYPE" Parameter="tOOLTYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PARTYCODE" Parameter="pARTYCODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PRICE" Parameter="pRICE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="OQTY" Parameter="oQTY" Type="System.Double" DbType="Float" />
+    <Parameter Name="QTY" Parameter="qTY" Type="System.Double" DbType="Float" />
+    <Parameter Name="SCHDATE" Parameter="sCHDATE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SCHMONTH" Parameter="sCHMONTH" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SCHYEAR" Parameter="sCHYEAR" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CREATED_ON" Parameter="cREATED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CREATED_BY" Parameter="cREATED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_ON" Parameter="mODIFIED_ON" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="MODIFIED_BY" Parameter="mODIFIED_BY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="UNPLANED_QTY" Parameter="uNPLANED_QTY" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ACTION" Parameter="aCTION" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

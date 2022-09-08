@@ -1,0 +1,277 @@
+<div>
+	<table class="table table-bordered table-condensed table-hover" cellspacing="0" rules="all" border="1" id="ContentPlaceHolder1_GridBooking" style="border-collapse:collapse;">
+		<thead>
+			<tr>
+				<th scope="col">Sr. No</th><th scope="col">TOOL TYPE</th><th scope="col">W1 QTY</th><th scope="col">W1 VALUE</th><th scope="col">W2 QTY</th><th scope="col">W2 VALUE</th><th scope="col">W3 QTY</th><th scope="col">W3 VALUE</th><th scope="col">W4 QTY</th><th scope="col">W4 VALUE</th><th scope="col">TOTAL QTY</th><th scope="col">TOTAL VALUE</th>
+			</tr>
+		</thead><tbody>
+			<tr>
+				<td>
+                                1
+                            </td><td>Boring Bar &amp; Tool Holder</td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Qty_0"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Value_0"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Qty_0"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Value_0"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Qty_0"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Value_0"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Qty_0"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Value_0"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalQTY_0">0</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalVAL_0">0.00</span>
+                            </td>
+			</tr><tr>
+				<td>
+                                2
+                            </td><td>C&#39; Bore &amp; C&#39; Sink</td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Qty_1"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Value_1"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Qty_1"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Value_1"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Qty_1"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Value_1"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Qty_1"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Value_1"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalQTY_1">0</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalVAL_1">0.00</span>
+                            </td>
+			</tr><tr>
+				<td>
+                                3
+                            </td><td>Cutting blades</td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Qty_2"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Value_2"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Qty_2"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Value_2"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Qty_2"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Value_2"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Qty_2"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Value_2"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalQTY_2">0</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalVAL_2">0.00</span>
+                            </td>
+			</tr><tr>
+				<td>
+                                4
+                            </td><td>Drill &amp; Core Drill</td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Qty_3">10</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Value_3">13660.00</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Qty_3">5</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Value_3">34920.00</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Qty_3"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Value_3"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Qty_3"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Value_3"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalQTY_3">15</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalVAL_3">48,580.00</span>
+                            </td>
+			</tr><tr>
+				<td>
+                                5
+                            </td><td>End Mill, Slot Drill &amp; Woodruff , T Slot Cutters</td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Qty_4">7</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Value_4">11020.00</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Qty_4">85</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Value_4">217390.00</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Qty_4"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Value_4"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Qty_4"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Value_4"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalQTY_4">92</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalVAL_4">228,410.00</span>
+                            </td>
+			</tr><tr>
+				<td>
+                                6
+                            </td><td>FIXTURE PIN</td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Qty_5"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Value_5"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Qty_5"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Value_5"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Qty_5"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Value_5"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Qty_5"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Value_5"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalQTY_5">0</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalVAL_5">0.00</span>
+                            </td>
+			</tr><tr>
+				<td>
+                                7
+                            </td><td>Flat Tool</td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Qty_6">10</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Value_6">21000.00</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Qty_6">1</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Value_6">10450.00</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Qty_6"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Value_6"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Qty_6"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Value_6"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalQTY_6">11</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalVAL_6">31,450.00</span>
+                            </td>
+			</tr><tr>
+				<td>
+                                8
+                            </td><td>Milling Cutter</td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Qty_7">3</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Value_7">48300.00</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Qty_7">19</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Value_7">62388.00</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Qty_7"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Value_7"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Qty_7"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Value_7"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalQTY_7">22</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalVAL_7">110,688.00</span>
+                            </td>
+			</tr><tr>
+				<td>
+                                9
+                            </td><td>Reamer &amp; Hole Mill</td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Qty_8">3</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Value_8">31995.00</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Qty_8">6</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Value_8">65010.00</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Qty_8"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Value_8"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Qty_8"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Value_8"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalQTY_8">9</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalVAL_8">97,005.00</span>
+                            </td>
+			</tr><tr>
+				<td>
+                                10
+                            </td><td>Resharpning Tool</td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Qty_9"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Value_9"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Qty_9"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Value_9"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Qty_9"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Value_9"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Qty_9"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Value_9"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalQTY_9">0</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalVAL_9">0.00</span>
+                            </td>
+			</tr><tr>
+				<td>
+                                11
+                            </td><td>Scrap</td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Qty_10"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW1Value_10"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Qty_10"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW2Value_10"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Qty_10"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW3Value_10"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Qty_10"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblW4Value_10"></span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalQTY_10">0</span>
+                            </td><td>
+                                <span id="ContentPlaceHolder1_GridBooking_lblTotalVAL_10">0.00</span>
+                            </td>
+			</tr><tr>
+				<td>&nbsp;</td><td style="font-weight:bold;">TOTAL</td><td style="font-weight:bold;">33</td><td style="font-weight:bold;">125,975.00</td><td style="font-weight:bold;">116</td><td style="font-weight:bold;">390,158.00</td><td style="font-weight:bold;">0</td><td style="font-weight:bold;">0.00</td><td style="font-weight:bold;">0</td><td style="font-weight:bold;">0.00</td><td style="font-weight:bold;">149</td><td style="font-weight:bold;">516,133.00</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

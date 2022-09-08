@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 26, 15.625" name="alankar_db_provider">
+  <DataContextMoniker Name="/alankar_db_providerDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9888366f-0d6b-4542-9cb3-9c3667cd1cd3" isExpanded="false" absoluteBounds="2, 10.125, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/CHANGE_LETTER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="628792b1-279c-4ae1-b116-74b4f10cea6d" absoluteBounds="2.0149999999999997, 10.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8453e807-c1ba-4911-b064-2cd5a71bfd96" isExpanded="false" absoluteBounds="15.375, 2.625, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/CUSTOMER_CONTACT_PERSON" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e3fa1ae-81e7-437d-9244-c18ca172e032" absoluteBounds="15.39, 3.085, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d334c77c-55f6-4cfc-aba1-122b971a39f1" isExpanded="false" absoluteBounds="5.125, 9.25, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/DIMENSION_CONFIGURATION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f149e8a6-8da4-43e7-8e1b-66ced12fe2ad" absoluteBounds="5.1400000000000006, 9.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d926a5d3-b0ef-48e9-b254-91f0cae06c7c" isExpanded="false" absoluteBounds="7, 5.375, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/DIMENSION_LOG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="505fd0a9-c9aa-465d-9746-2e3549f6b3ef" absoluteBounds="7.0150000000000006, 5.8350000000000009, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4ead04c5-e7ab-4b3c-a707-659e2ae5e51a" isExpanded="false" absoluteBounds="2, 11, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/DIMENSION_NAME_LOG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ce976dea-7661-4a51-b753-dd2a3d44edfa" absoluteBounds="2.0150000000000006, 11.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d7f3d5e2-43c9-463d-b9b4-3ec776890175" isExpanded="false" absoluteBounds="5.125, 10.125, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/DIMENSION_RESTRICTION_MASTER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aace05be-0e98-44a9-9c4f-f3b09025b81c" absoluteBounds="5.1400000000000006, 10.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b927d382-9930-45f7-99e2-fa7022833d4d" isExpanded="false" absoluteBounds="15.75, 6.75, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/DIMENTION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a6222dfd-1a97-4aa0-b0ee-4e9bd2480637" absoluteBounds="15.765, 7.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7675a69c-df0f-4a4f-b4d5-5263f0b990f7" isExpanded="false" absoluteBounds="7.625, 11, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/DIMENTION_TYPE_MASTER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="761941e8-553a-4ad9-a5fd-643d39f22b4b" absoluteBounds="7.6400000000000006, 11.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fd730726-1694-4220-bc1b-44f8bc9ca653" isExpanded="false" absoluteBounds="15.75, 7.875, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/DISPATCH_DETAIL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bfeeb50a-a6f1-4584-bf65-92ddb5b46e2c" absoluteBounds="15.765, 8.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1999cf41-4ccb-47f8-a8e5-21bbc44be501" isExpanded="false" absoluteBounds="7.5, 11.875, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/DRG_DOC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f482f8dd-1072-48a7-b0dd-3921c5cc55a0" absoluteBounds="7.5150000000000006, 12.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="296a1b0f-dda6-4e96-a369-8a542ade031f" isExpanded="false" absoluteBounds="2, 11.875, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/EMP_MASTER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="65f0bd6d-0d55-4075-93f9-51296eeed302" absoluteBounds="2.0150000000000006, 12.335, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f444f03a-82a1-4b70-8ce6-a69ca950d06b" isExpanded="false" absoluteBounds="5.125, 11.875, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/IN_PROCESS_MASTER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3fde4e99-7512-4e64-92b5-b85335d2fa4e" absoluteBounds="5.1400000000000006, 12.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="30d9a5b7-3ff9-4fdc-b4be-d529980308cc" isExpanded="false" absoluteBounds="18.75, 6.75, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/INVOICE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="469f5c8b-2be9-4d53-a672-1e700846b3ca" absoluteBounds="18.765, 7.21, 1.9700000000000002, 7.556844075520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b58a52df-fed1-4dd5-91c1-cb465ace8a9c" isExpanded="false" absoluteBounds="2.625, 5.75, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/INVOICE_DETAIL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c188099f-f65d-49af-9d34-27920fd4f4a9" absoluteBounds="2.64, 6.2100000000000009, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="24c6d828-91f3-4167-91db-bd3746cc623d" isExpanded="false" absoluteBounds="9.875, 11.125, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/MASTER_NOTI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ca38066-9060-4967-8bd7-cd01f2cc721e" absoluteBounds="9.89, 11.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e0a99222-01be-4d61-9db5-7013b6e20e1f" isExpanded="false" absoluteBounds="9.875, 12.125, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/MASTER_STAGE_TYPE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d587a07-6e84-408a-aa20-751c51f9ef69" absoluteBounds="9.89, 12.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a3f6fe30-9496-4bb0-897e-6bf260e6b0f5" isExpanded="false" absoluteBounds="2, 12.875, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/MASTER_TOOL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="591b654e-04d0-4900-9bf5-21695d43db2f" absoluteBounds="2.015, 13.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7c7aa452-1cae-4138-ac5b-c30728a5defe" isExpanded="false" absoluteBounds="5.125, 13, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/MASTER_TOOL_SELECTION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="30e4b3df-0ede-41bb-8bcb-a53431800cb7" absoluteBounds="5.14, 13.46, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d9a7d89e-19af-4630-8813-bb24f51b06ac" isExpanded="false" absoluteBounds="7.5, 13, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/MASTER_TOOL_TYPE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c61c90ac-4606-4504-b2df-a6eaa3382eef" absoluteBounds="7.5150000000000006, 13.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3953c6b6-dd18-4df4-8c20-b52ffa1323a2" isExpanded="false" absoluteBounds="9.875, 13.125, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/NOT_ISSUE_MASTER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7353a11d-272e-48f3-84d2-2e4b19e6fa2b" absoluteBounds="9.89, 13.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="736217f3-08d7-4ec9-bec9-84fa16d350d2" isExpanded="false" absoluteBounds="9.75, 14, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/OC_ACTION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e10f6386-b965-475d-8db3-f9a0f8004dc1" absoluteBounds="9.765, 14.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="243a0f3c-46d1-4696-a259-05fba5cce946" isExpanded="false" absoluteBounds="7.375, 14.875, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/OC_DOC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="34ae841a-472a-4a77-8efc-c54602dec78b" absoluteBounds="7.3900000000000006, 15.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b0ebda13-8de1-441f-868e-363e4439903c" isExpanded="false" absoluteBounds="21.75, 6.75, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/RAW_MATERIAL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4d763b3b-117b-450d-a7a5-e5a48a44ee54" absoluteBounds="21.765, 7.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ca878ee8-a084-4dd0-970f-198c55b75562" isExpanded="false" absoluteBounds="7, 1.75, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/RAW_MATERIAL_CONFIG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="89194625-eb19-4732-be8c-5d4a691189c9" absoluteBounds="7.0150000000000006, 2.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6aea7fe4-edca-4045-99e5-b15dc7f03937" isExpanded="false" absoluteBounds="23.75, 4.25, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/RAW_MATERIAL_LOG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ff7d1d21-b019-4cec-a02e-4267ef3d0953" absoluteBounds="23.765, 4.7100000000000009, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3bfaf49f-1bd1-4340-bced-ccc024729c8c" isExpanded="false" absoluteBounds="12.375, 11.125, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/RAW_MATERIAL_TRANSACTION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="50332cf5-71c5-4867-b859-1dd10a51f46d" absoluteBounds="12.39, 11.585, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8b2d589c-4cf1-49ee-b160-1499126ebda6" isExpanded="false" absoluteBounds="2.625, 3.875, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/REJECTION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5bc58036-1930-4585-8f9c-89aa1c769008" absoluteBounds="2.64, 4.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="40c0758a-c336-4e90-9789-b6b8f5b5241a" isExpanded="false" absoluteBounds="12.25, 12, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/RM_NAME_LOG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e0896e38-6b94-450c-b9fe-1e0ff5bdc624" absoluteBounds="12.265, 12.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="abb34e3a-4c17-49fc-9ed1-9d612a3d27b6" isExpanded="false" absoluteBounds="2.625, 4.875, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/SALVAGE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b5157cb6-8e50-472e-b9b9-410b0b80a540" absoluteBounds="2.64, 5.3350000000000009, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e9815b70-7f5a-45fd-acc1-9c5b1e83f14f" isExpanded="false" absoluteBounds="2, 14, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/STAGE_LOG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d33638d-c42d-4872-a73f-849e757d8723" absoluteBounds="2.015, 14.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2a33cd7a-b1ec-4a00-a0ce-d45748853a87" isExpanded="false" absoluteBounds="7.5, 14, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/STAGE_MASTER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="94bcae33-4604-4017-8e2f-3cd2a2b6750d" absoluteBounds="7.5150000000000006, 14.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a88f50a5-0de7-4830-aca4-dc5d57be64b7" isExpanded="false" absoluteBounds="23.75, 2.625, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/STAGE_NAME_LOG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6313dc4a-d8a9-43d2-ade0-5f06e8c27538" absoluteBounds="23.765, 3.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="76d8cafb-96cf-419d-a2bc-cbabb2c3871c" isExpanded="false" absoluteBounds="3.5, 1.75, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/STAGE_TRANSACTION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7661b921-8d26-457e-a986-abf5ed311c67" absoluteBounds="3.515, 2.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d3bc2f7c-8d43-4006-bae4-b917b8674c96" isExpanded="false" absoluteBounds="23.75, 3.375, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/STAGE_TYPE_MASTER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="272f8075-dea6-42ea-a24f-e1144e118b6b" absoluteBounds="23.765, 3.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f148c3bb-3f29-4159-ac61-541bd37c4b60" isExpanded="false" absoluteBounds="5, 14, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/STAGE_TYPE_NAME_LOG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="079b543a-43aa-4177-99b2-1abe047792f1" absoluteBounds="5.0150000000000006, 14.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2eba35fe-4298-40cf-a3b6-e1482c7c1b44" isExpanded="false" absoluteBounds="7, 4.375, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/STAGE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2a39188c-7a14-47b6-86c6-b4e8e3da2efd" absoluteBounds="7.0150000000000006, 4.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fdcaaabd-066b-4d7a-90d0-e5532ac80022" isExpanded="false" absoluteBounds="23.75, 6, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/SUB_TOOL_NAME_LOG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e8a9fbe2-7d91-4630-8183-1b404042a534" absoluteBounds="23.765, 6.4600000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="78791872-02f3-4ba7-847c-165ea86b4cea" isExpanded="false" absoluteBounds="2, 9.25, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/TOOL_DIMENSION_CONFIGURATION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1f574531-6019-4b39-a03a-082a81774f5b" absoluteBounds="2.0149999999999997, 9.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="34a389bb-7672-4e9e-b52c-4159eee65ca6" isExpanded="false" absoluteBounds="23.75, 5.125, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/TOOL_NAME_LOG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="412ff77d-2e07-4b4f-93fa-dbcaebcefe70" absoluteBounds="23.765, 5.5850000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="54508a4a-3fbd-4cde-9ba8-9a209a449fa9" isExpanded="false" absoluteBounds="7, 3.375, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/TOOL_STAGES_CONFIGURATION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ada4e130-c940-4479-85da-316f05d87d51" absoluteBounds="7.015, 3.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b66953bb-328e-4316-b79b-4f4955731cc8" isExpanded="false" absoluteBounds="7, 2.5, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/TOOL_TYPE_RM_CONFIGURATION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23e14868-7ef1-4178-9f68-5e2e0a363268" absoluteBounds="7.015, 2.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4 : 9.475); (5.125 : 9.475)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/alankar_db_providerDataContext/TOOL_DIMENSION_CONFIGURATION/TOOL_DIMENSION_CONFIGURATION_DIMENSION_CONFIGURATION" />
+      <nodes>
+        <classShapeMoniker Id="78791872-02f3-4ba7-847c-165ea86b4cea" />
+        <classShapeMoniker Id="d334c77c-55f6-4cfc-aba1-122b971a39f1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8 : 3.825); (8 : 4.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/alankar_db_providerDataContext/TOOL_STAGES_CONFIGURATION/TOOL_STAGES_CONFIGURATION_STAGE" />
+      <nodes>
+        <classShapeMoniker Id="54508a4a-3fbd-4cde-9ba8-9a209a449fa9" />
+        <classShapeMoniker Id="2eba35fe-4298-40cf-a3b6-e1482c7c1b44" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8 : 2.5); (8 : 2.2)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/alankar_db_providerDataContext/TOOL_TYPE_RM_CONFIGURATION/TOOL_TYPE_RM_CONFIGURATION_RAW_MATERIAL_CONFIG" />
+      <nodes>
+        <classShapeMoniker Id="b66953bb-328e-4316-b79b-4f4955731cc8" />
+        <classShapeMoniker Id="ca878ee8-a084-4dd0-970f-198c55b75562" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="96ae4b13-643f-427c-8fc7-f4e60e8d7176" isExpanded="false" absoluteBounds="2.5, 2.375, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/OC_TRANSACTION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b71f4f7f-b583-4ddb-a8c5-36ca2dd662a7" absoluteBounds="2.515, 2.835, 1.9700000000000002, 15.056599934895832" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.52215284615385 : 2.825); (1.86590284615385 : 3.48125); (2.375 : 3.48125); (2.375 : 5.5); (2.625 : 5.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/alankar_db_providerDataContext/OC_TRANSACTION/OC_TRANSACTION_INVOICE_DETAIL" />
+      <nodes>
+        <classShapeMoniker Id="96ae4b13-643f-427c-8fc7-f4e60e8d7176" />
+        <classShapeMoniker Id="b58a52df-fed1-4dd5-91c1-cb465ace8a9c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5625 : 2.825); (3.5625 : 3.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/alankar_db_providerDataContext/OC_TRANSACTION/OC_TRANSACTION_REJECTION" />
+      <nodes>
+        <classShapeMoniker Id="96ae4b13-643f-427c-8fc7-f4e60e8d7176" />
+        <classShapeMoniker Id="8b2d589c-4cf1-49ee-b160-1499126ebda6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.50761438461538 : 2.825); (2.13261438461538 : 3.2); (2.25 : 3.2); (2.25 : 4.5); (2.31607443490112 : 4.56607443490112 : JumpStart); (2.43392556509888 : 4.68392556509888 : JumpEnd); (2.625 : 4.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/alankar_db_providerDataContext/OC_TRANSACTION/OC_TRANSACTION_SALVAGE" />
+      <nodes>
+        <classShapeMoniker Id="96ae4b13-643f-427c-8fc7-f4e60e8d7176" />
+        <classShapeMoniker Id="abb34e3a-4c17-49fc-9ed1-9d612a3d27b6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4 : 2.375); (4 : 2.2)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/alankar_db_providerDataContext/OC_TRANSACTION/OC_TRANSACTION_STAGE_TRANSACTION" />
+      <nodes>
+        <classShapeMoniker Id="96ae4b13-643f-427c-8fc7-f4e60e8d7176" />
+        <classShapeMoniker Id="76d8cafb-96cf-419d-a2bc-cbabb2c3871c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f543bc7d-bb35-4f00-a0df-f145bd14a3a6" isExpanded="false" absoluteBounds="5.125, 11, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/DIMENTION_TRANSACTION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="216eec88-d81c-415a-a0c3-f0cbe0bd6e83" absoluteBounds="5.14, 11.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="96ca8971-66f3-48b4-8c3f-73a3cf84d391" isExpanded="false" absoluteBounds="18, 2.625, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/GST_INV" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2bfdeee2-289f-4db3-9b36-8d960cd632e5" absoluteBounds="18.015, 3.085, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9600a1cc-78ec-4ad8-9fa4-50c568373315" isExpanded="false" absoluteBounds="12.25, 2.625, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/MASTER_PARTY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2d4cdca-6f37-451c-b7ab-30be86fa15bd" absoluteBounds="12.265, 3.085, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.25 : 2.85); (15.375 : 2.85)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/alankar_db_providerDataContext/MASTER_PARTY/MASTER_PARTY_CUSTOMER_CONTACT_PERSON" />
+      <nodes>
+        <classShapeMoniker Id="9600a1cc-78ec-4ad8-9fa4-50c568373315" />
+        <classShapeMoniker Id="8453e807-c1ba-4911-b064-2cd5a71bfd96" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d4f031ac-2c6d-4370-b0bd-f8747926f5e6" isExpanded="false" absoluteBounds="20.75, 2.625, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/OC_TRANSACTIONS_LOG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9c84ef17-2fc1-4aff-9b25-4b5534d9e3f7" absoluteBounds="20.765, 3.085, 1.9700000000000002, 4.672322591145833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ffe40033-72a1-41d6-b3a9-868e3cda5987" isExpanded="false" absoluteBounds="2, 7.5, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/StockRM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="304ba7a1-2b6d-4226-83c2-5a21f2503ffb" absoluteBounds="2.015, 7.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(22.75 : 7.2); (22.75 : 7.65625); (4 : 7.65625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/alankar_db_providerDataContext/RAW_MATERIAL/RAW_MATERIAL_StockRM" />
+      <nodes>
+        <classShapeMoniker Id="b0ebda13-8de1-441f-868e-363e4439903c" />
+        <classShapeMoniker Id="ffe40033-72a1-41d6-b3a9-868e3cda5987" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6fe25cf7-ce84-476a-b876-132f8a06e531" isExpanded="false" absoluteBounds="2, 8.375, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/StockRm_Log" />
+      <nestedChildShapes>
+        <elementListCompartment Id="71efbba7-ee3c-4cfe-8100-a92f13504a53" absoluteBounds="2.015, 8.835, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="028eab05-d771-422a-9e41-3da33e297b0a" isExpanded="false" absoluteBounds="12.75, 13.25, 2, 0.45">
+      <DataClassMoniker Name="/alankar_db_providerDataContext/SCHEDULE_DETAIL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a00c922f-9424-4ba2-b9e6-065a0eac0360" absoluteBounds="12.765, 13.71, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
